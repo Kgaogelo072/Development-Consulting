@@ -139,7 +139,66 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Tweaks */
+.what-we-do {
+  background-color: #fff;
+}
+
+.arrow-flow {
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.arrow-img {
+  width: 250px;
+  margin-bottom: -25px;
+  margin-left: 120px;
+}
+
+.circle-icon {
+  background-color: #333;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.circle-icon img {
+  width: 50%;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.service-item:hover .circle-icon {
+  background-color: #f7c600; 
+  transform: scale(1.1);
+}
+
+.service-item:hover .circle-icon img {
+  filter: brightness(0); 
+}
+
+.service-label {
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.service-item:hover .service-label {
+  color: #f7c600;
+}
+
 @media (max-width: 767.98px) {
   .section-title {
     font-size: 1.5rem;
