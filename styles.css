@@ -152,21 +152,21 @@ body {
 .service-item {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
   align-items: center;
   position: relative;
 }
 
 .arrow-img {
-  width: 250px;
-  margin-bottom: -25px;
-  margin-left: 120px;
+  width: 220px;
 }
 
 .circle-icon {
   background-color: #333;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,6 +180,12 @@ body {
   transition: filter 0.3s ease;
 }
 
+.circle{
+  position: relative;
+  right: 32%;
+  bottom: 80px;
+}
+
 .service-item:hover .circle-icon {
   background-color: #f7c600; 
   transform: scale(1.1);
@@ -190,6 +196,9 @@ body {
 }
 
 .service-label {
+  position: relative;
+  right: 32%;
+  bottom: 80px;
   margin-top: 1rem;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -197,6 +206,11 @@ body {
 
 .service-item:hover .service-label {
   color: #f7c600;
+}
+
+.overlay{
+  left: 32%;
+  top: 138%;
 }
 
 @media (max-width: 767.98px) {
@@ -207,6 +221,15 @@ body {
   .hero h1 {
     font-size: 2rem;
   }
+
+  .overlay{
+  left: 45%;
+  top: 137.5%;
+}
+
+  .initial{
+  right: 10%;
+}
 
   .service-box {
     height: 120px;
