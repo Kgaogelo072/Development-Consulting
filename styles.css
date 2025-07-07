@@ -152,14 +152,13 @@ body {
 .service-item {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
-  margin-right: 20px;
   align-items: center;
   position: relative;
+  margin: 0 50px;
 }
 
 .arrow-img {
-  width: 220px;
+  width: 320px;
 }
 
 .circle-icon {
@@ -186,15 +185,6 @@ body {
   bottom: 80px;
 }
 
-.service-item:hover .circle-icon {
-  background-color: #f7c600; 
-  transform: scale(1.1);
-}
-
-.service-item:hover .circle-icon img {
-  filter: brightness(0); 
-}
-
 .service-label {
   position: relative;
   right: 32%;
@@ -204,14 +194,29 @@ body {
   transition: color 0.3s ease;
 }
 
-.service-item:hover .service-label {
-  color: #f7c600;
+.overlay{
+  top: 137.5%;
+  left: 24%;
 }
 
-.overlay{
-  left: 32%;
-  top: 138%;
+#services .btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; 
 }
+
+#services .btn-container .btn {
+  background-color: #222;
+  border: none;
+  padding: 10px 24px;
+  color: #fff;
+}
+
+
+#services .btn-container .btn:hover {
+  background-color: #f7c600;
+}
+
 
 @media (max-width: 767.98px) {
   .section-title {
@@ -222,10 +227,21 @@ body {
     font-size: 2rem;
   }
 
+  .overlay .arrow-img {
+    width: 320px; 
+    height: auto;
+    clip-path: inset(0 160px 0 0); 
+  }
+
   .overlay{
   left: 45%;
-  top: 137.5%;
-}
+  top: 140.5%;
+  }
+
+  .overlay .service-item:last-of-type {
+    margin-top: 168px;
+    margin-right: 170px;
+  }
 
   .initial{
   right: 10%;
