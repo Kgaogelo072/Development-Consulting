@@ -19,8 +19,8 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
@@ -58,9 +58,8 @@
     <h2 class="section-title mb-3">WHAT WE DO</h2>
     <p class="section-subtitle mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
-    <div class="initial d-flex justify-content-center align-items-end position-relative flex-wrap arrow-flow">
+    <div class="service-content d-flex justify-content-center align-items-end position-relative flex-wrap arrow-flow">
       <div class="service-item">
-        <img src="assets/arrow-start.png" alt="Arrow Start" class="arrow-img">
         <div class="circle">
           <div class="circle-icon">
             <img src="assets/d-1.png" alt="Marketing">
@@ -69,7 +68,6 @@
         <p class="service-label">Software Modernization</p>
       </div>
       <div class="service-item midle-service-item">
-        <img src="assets/arrow-middle.png" alt="Arrow Middle" class="arrow-img">
         <div class="circle">
             <div class="circle-icon">
               <img src="assets/d-4.png" alt="CSS">
@@ -79,7 +77,6 @@
       </div>
 
       <div class="service-item">
-        <img src="assets/arrow-end.png" alt="Arrow End" class="arrow-img">
           <div class="circle">
           <div class="circle-icon">
             <img src="assets/d-5.png" alt="WordPress">
@@ -87,11 +84,8 @@
         </div>
         <p class="service-label">Cloud Consulting & DevOps</p>
       </div>
-    </div>
 
-    <div class="overlay d-flex justify-content-center align-items-end position-absolute flex-wrap arrow-flow">
       <div class="service-item">
-        <img src="assets/arrow-middle.png" alt="Arrow Middle" class="arrow-img">
         <div class="circle">
           <div class="circle-icon">
             <img src="assets/d-2.png" alt="Development">
@@ -101,7 +95,6 @@
       </div>
 
       <div class="service-item">
-        <img src="assets/arrow-middle.png" alt="Arrow Middle" class="arrow-img">
           <div class="circle">
           <div class="circle-icon">
             <img src="assets/d-3.png" alt="HTML5">
@@ -121,7 +114,7 @@
     </div>
   </div>
   <div class="btn-container">
-    <a href="#" class="btn btn-dark px-4">Read More</a>
+    <a href="#" class="btn btn-dark px-4">Lean More</a>
   </div>
 </section>
 
@@ -131,7 +124,7 @@
   <div class="container">
     <div class="row align-items-center gy-4">
       <div class="col-lg-6">
-        <img src="https://via.placeholder.com/500x300" class="img-fluid rounded shadow-sm" alt="Work Desk">
+        <img src="assets/who-img.jpg" class="img-fluid rounded shadow-sm" alt="Work Desk">
       </div>
       <div class="col-lg-6">
         <h2 class="section-title">WHO WE ARE?</h2>
@@ -143,17 +136,37 @@
 </section>
 
 <!-- Portfolio -->
-<section class="py-5" id="portfolio">
-  <div class="container text-center">
-    <h2 class="mb-4 section-title">CREATIVE WORKS</h2>
-    <div class="row g-4">
-      <div class="col-md-3"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded shadow-sm" alt="Work 1"></div>
-      <div class="col-md-3"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded shadow-sm" alt="Work 2"></div>
-      <div class="col-md-3"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded shadow-sm" alt="Work 3"></div>
-      <div class="col-md-3"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded shadow-sm" alt="Work 4"></div>
+  <!-- work section -->
+  <section class="work_section layout_padding" id="portfolio">
+    <div class="container">
+      <div class="heading_container">
+        <h2 class="section-title mb-3 mt-5">
+          CREATIVE WORKS
+        </h2>
+        <p>
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation
+        </p>
+      </div>
+      <div class="work_container layout_padding2">
+        <div class="box b-1">
+          <img src="./assets/w-1.png" alt="">
+        </div>
+        <div class="box b-2">
+          <img src="./assets/w-2.png" alt="">
+
+        </div>
+        <div class="box b-3">
+          <img src="./assets/w-3.png" alt="">
+
+        </div>
+        <div class="box b-4">
+          <img src="./assets/w-4.png" alt="">
+
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="main.js"></script>
