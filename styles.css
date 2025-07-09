@@ -211,6 +211,10 @@ body {
   color: #fff;
 }
 
+footer i {
+  min-width: 30px;
+  text-align: center;
+}
 
 #services .btn-container .btn:hover {
   background-color: #f7c600;
@@ -260,6 +264,14 @@ body {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .service-item {
+    width: 40%;
+  }
+
+    footer p {
+    font-size: 0.9rem;
   }
 
 }
