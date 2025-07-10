@@ -91,6 +91,10 @@ body {
   color: #555;
 }
 
+.footer-section-header{
+  color: #f7c600;
+}
+
 /* Services Section */
 .service-box {
   background-color: #f7c600;
