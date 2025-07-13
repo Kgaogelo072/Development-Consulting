@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esigned Web Agency</title>
+  <title>Code Orbit</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="styles.css" rel="stylesheet">
@@ -14,7 +14,9 @@
 <!-- Header -->
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Esigned</a>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assets/logo.png" alt="Code Orbit Logo" height="50" class="me-2" />
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,53 +37,55 @@
   <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="hero-slide" style="background-image: url('./assets/coding1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('./assets/coding1.png');"></div>
       </div>
       <div class="carousel-item">
-        <div class="hero-slide" style="background-image: url('./assets/coding2.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('./assets/coding2.png');"></div>
       </div>
       <div class="carousel-item">
-        <div class="hero-slide" style="background-image: url('./assets/coding3.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('./assets/coding3.png');"></div>
       </div>
     </div>
   </div>
 
   <!-- Hero Text Overlay -->
   <div class="hero-content position-absolute top-50 start-50 translate-middle text-center">
-    <h1>WELCOME TO <br> WEB AGENCY</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <a href="#" class="btn btn-outline-light m-2">Contact Us</a>
+    <h1>WELCOME TO <br> CODE ORBIT</h1>
+    <p class="lead"> Building modern software solutions that help businesses thrive in the digital world.</p>
+    <a href="#contact" class="btn btn-outline-light m-2">Contact Us</a>
   </div>
 </section>
 
-<!-- What We Do -->
 <section class="what-we-do py-5" id="services">
   <div class="container text-center">
     <h2 class="section-title mb-3">WHAT WE DO</h2>
-    <p class="section-subtitle mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    <p class="section-subtitle mb-5">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+    </p>
 
     <div class="service-content d-flex justify-content-center align-items-end position-relative flex-wrap arrow-flow">
       <div class="service-item">
         <div class="circle">
           <div class="circle-icon">
-            <img src="assets/d-1.png" alt="Marketing">
+            <i class="fas fa-sync-alt"></i> <!-- Software Modernization -->
           </div>
         </div>
         <p class="service-label">Software Modernization</p>
       </div>
+
       <div class="service-item midle-service-item">
         <div class="circle">
-            <div class="circle-icon">
-              <img src="assets/d-4.png" alt="CSS">
-            </div>
+          <div class="circle-icon">
+            <i class="fas fa-user-cog"></i> <!-- Technology Consulting -->
+          </div>
         </div>
         <p class="service-label">Technology Consulting</p>
       </div>
 
       <div class="service-item">
-          <div class="circle">
+        <div class="circle">
           <div class="circle-icon">
-            <img src="assets/d-5.png" alt="WordPress">
+            <i class="fas fa-cloud"></i> <!-- Cloud Consulting & DevOps -->
           </div>
         </div>
         <p class="service-label">Cloud Consulting & DevOps</p>
@@ -90,16 +94,16 @@
       <div class="service-item">
         <div class="circle">
           <div class="circle-icon">
-            <img src="assets/d-2.png" alt="Development">
+            <i class="fas fa-code"></i> <!-- Software Development -->
           </div>
         </div>
         <p class="service-label">Software Development</p>
       </div>
 
       <div class="service-item">
-          <div class="circle">
+        <div class="circle">
           <div class="circle-icon">
-            <img src="assets/d-3.png" alt="HTML5">
+            <i class="fas fa-project-diagram"></i> <!-- Systems Integration -->
           </div>
         </div>
         <p class="service-label">Systems Integration</p>
@@ -108,17 +112,18 @@
       <div class="service-item">
         <div class="circle">
           <div class="circle-icon">
-              <img src="assets/d-3.png" alt="HTML5">
-            </div>
+            <i class="fas fa-tasks"></i> <!-- Project Management -->
           </div>
-          <p class="service-label">Project Management</p>
+        </div>
+        <p class="service-label">Project Management</p>
       </div>
     </div>
   </div>
   <div class="btn-container">
-    <a href="#" class="btn btn-dark px-4">Lean More</a>
+    <a href="#" class="btn btn-dark px-4">Learn More</a>
   </div>
 </section>
+
 
 
 <!-- About Us -->
@@ -143,7 +148,7 @@
     <div class="container">
       <div class="heading_container">
         <h2 class="section-title mb-3 mt-5">
-          CREATIVE WORKS
+          PORTFOLIO
         </h2>
         <p>
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -220,7 +225,7 @@
       <div class="row text-center text-md-left">
         <hr class="mb-4">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="txt-uppercase mb-4 font-weight-bold footer-section-header">Company Name</h5>
+          <h5 class="txt-uppercase mb-4 font-weight-bold footer-section-header">Code Orbit</h5>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -271,11 +276,11 @@
         </p>
         <p class="d-flex align-items-center">
           <i class="fas fa-envelope fa-lg me-3"></i>
-          fortunatekgaogelo@gmail.com
+          info@codeorbit.co.za
         </p>
         <p class="d-flex align-items-center">
           <i class="fas fa-phone fa-lg me-3"></i>
-          072 8945 924
+          073 2831 206
         </p>
       </div>
 
@@ -287,7 +292,7 @@
         <div class="col-md-7 col-lg-8 text-start">
           <p> &copy; <span id="year"></span> All rights reserved by:
             <a href="#" style="text-decoration: none;">
-              <strong class="text-warning">Kgaogelo Tshabalala</strong>
+              <strong class="text-warning">Code Orbit</strong>
             </a>
           </p>
         </div>
