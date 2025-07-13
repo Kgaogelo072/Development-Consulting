@@ -9,6 +9,32 @@ body {
   padding-top: 50px;
 }
 
+/* Section Titles and Subtitles */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #f7c600;
+  margin: 0.5rem auto 0;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
 .nav-link.active {
   font-weight: bold;
   color: #f7c600 !important;
@@ -43,6 +69,7 @@ body {
 .service-label::after {
   content: "";
   display: block;
+  position: relative;
   width: 60px;
   height: 3px;
   background-color: #f7c600;
@@ -50,6 +77,43 @@ body {
 }
 
 .service-item {
-  width: 280px;
-  margin-top: 40px;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.service-label {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.circle-container {
+  overflow: hidden;
+}
+
+.circle-icon-wrap {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.circle-icon {
+  background-color: #333;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-icon i {
+  font-size: 17px;
+  color: white;
+}
+
+.wrap-text {
+  text-align: justify;
 }
