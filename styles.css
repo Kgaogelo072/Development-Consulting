@@ -282,11 +282,20 @@ html {
   }
 
   .service-item {
-    width: 40%;
+    width: 80%; 
+    margin: 0 auto 2rem auto; 
+    right: 0;
   }
 
-    footer p {
+  .circle,
+  .service-label {
+    right: 0; 
+    bottom: 0;
+    text-align: center;
+  }
+
+  footer p {
     font-size: 0.9rem;
   }
-
 }
+
