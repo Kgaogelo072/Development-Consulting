@@ -1,27 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.nav-link');
+  const sections = Array.from(navLinks)
+    .map(link => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
 
   function setActiveLink() {
-    const fromTop = window.scrollY + 80;
+    const fromTop = window.scrollY + 110; // Adjust for header height (change if needed)
+
+    let currentSection = sections.findLast(section =>
+      fromTop >= section.offsetTop
+    );
 
     navLinks.forEach(link => {
+      link.classList.remove("active");
       const sectionId = link.getAttribute("href");
-      if (!sectionId.startsWith("#")) return;
-
-      const section = document.querySelector(sectionId);
-      if (section) {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-
-        if (fromTop >= sectionTop && fromTop < sectionTop + sectionHeight) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
+      if (currentSection && sectionId === `#${currentSection.id}`) {
+        link.classList.add("active");
       }
     });
   }
 
-  window.addEventListener("scroll", setActiveLink);
-  setActiveLink(); 
+  window.addEventListener("scroll", setActiveLink, { passive: true });
+  setActiveLink();
 });

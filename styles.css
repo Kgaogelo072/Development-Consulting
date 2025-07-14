@@ -345,5 +345,27 @@ html {
     display: none;
   }
 
+  .google-map-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+    .footer-services,
+  .footer-links {
+    display: none;
+  }
+
+  .footer-bottom-text {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .footer-social-icons {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
 }
 
