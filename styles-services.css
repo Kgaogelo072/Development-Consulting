@@ -9,30 +9,13 @@ body {
   padding-top: 50px;
 }
 
-/* Section Titles and Subtitles */
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  position: relative;
-  display: inline-block;
+html, body {
+  height: 100%;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #f7c600;
-  margin: 0.5rem auto 0;
-}
-
-.section-subtitle {
-  font-size: 1rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  color: #555;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 .nav-link.active {
@@ -117,3 +100,12 @@ body {
 .wrap-text {
   text-align: justify;
 }
+
+#services {
+  min-height: 100vh;
+  display: flex;
+  align-items: center; 
+  padding-top: 100px; 
+  padding-bottom: 50px;
+}
+

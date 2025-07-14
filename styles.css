@@ -266,6 +266,10 @@ footer i {
   margin-bottom: 45px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 
 @media (max-width: 767.98px) {
