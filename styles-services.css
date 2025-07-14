@@ -109,3 +109,22 @@ html {
   padding-bottom: 50px;
 }
 
+@media (max-width: 767.98px) {
+  .footer-services,
+  .footer-links {
+    display: none;
+  }
+
+  .footer-bottom-text {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .footer-social-icons {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+
+
