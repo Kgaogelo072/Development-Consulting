@@ -132,10 +132,7 @@ body {
   50% { background-position: 200% 0; }
 }
 
-.service-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+/* Hover effects removed per user request */
 
 .service-card-inner {
   position: relative;
@@ -182,20 +179,7 @@ body {
   z-index: 1;
 }
 
-.service-card:hover .service-glow {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-.service-card:hover .service-icon {
-  background: linear-gradient(135deg, #f7c600 0%, #ffd700 100%);
-  transform: scale(1.1) rotate(5deg);
-}
-
-.service-card:hover .service-icon i {
-  color: #333;
-  transform: scale(1.1);
-}
+/* All hover effects removed per user request */
 
 .service-title {
   font-size: 1.3rem;
@@ -212,40 +196,7 @@ body {
   font-size: 0.95rem;
 }
 
-.service-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(247, 198, 0, 0.95) 0%, rgba(255, 215, 0, 0.95) 100%);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 10;
-}
-
-.service-card:hover .service-overlay {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.overlay-content {
-  text-align: center;
-  color: #333;
-  font-weight: 600;
-}
-
-.overlay-content span {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
+/* Overlay styles removed - no hover interactions */
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
