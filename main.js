@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .filter(Boolean);
 
   function setActiveLink() {
-    const fromTop = window.scrollY + 110; // Adjust for header height (change if needed)
+    const fromTop = window.scrollY + 110;
 
     let currentSection = sections.findLast(section =>
       fromTop >= section.offsetTop
@@ -23,3 +23,27 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", setActiveLink, { passive: true });
   setActiveLink();
 });
+
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true
+});
+
+function toggleFAQ(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('i');
+  
+  if (answer.style.display === 'none' || answer.style.display === '') {
+    answer.style.display = 'block';
+    icon.classList.remove('fa-chevron-down');
+    icon.classList.add('fa-chevron-up');
+  } else {
+    answer.style.display = 'none';
+    icon.classList.remove('fa-chevron-up');
+    icon.classList.add('fa-chevron-down');
+  }
+}
