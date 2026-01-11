@@ -1,40 +1,64 @@
-/* styles.css */
+/* =========================================================
+   styles.css — CodeOrbit
+   Cleaned + Organized
+   ========================================================= */
 
-/* General Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* =======================
+   GLOBAL
+   ======================= */
+html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   padding-top: 0; /* navbar overlays hero */
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-.nav-link.active {
-  font-weight: bold;
-  color: #f7c600 !important;
-  border-bottom: 2px solid #f7c600;
-}
-
-/* NAVBAR OVER HERO (overlay) */
+/* =======================
+   NAVBAR (TRANSPARENT OVER HERO)
+   ======================= */
 #mainNav {
   background: transparent !important;
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
   z-index: 1050;
 }
 
-/* Optional: when scrolled, make navbar solid */
+/* Solid navbar on scroll */
 #mainNav.nav-scrolled {
   background: rgba(17, 17, 17, 0.95) !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* HERO (Single Image) */
+/* Force navbar links to white (Bootstrap override) */
+#mainNav .navbar-nav .nav-link,
+#mainNav .navbar-nav .nav-link:focus,
+#mainNav .navbar-nav .nav-link:visited {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+/* Hover */
+#mainNav .navbar-nav .nav-link:hover {
+  color: #f7c600 !important;
+}
+
+/* Active */
+#mainNav .navbar-nav .nav-link.active {
+  color: #f7c600 !important;
+  font-weight: 700;
+  border-bottom: 2px solid #f7c600;
+}
+
+/* =======================
+   HERO (SINGLE IMAGE)
+   ======================= */
 .hero.hero--single {
   height: 100vh;
   min-height: 600px;
@@ -48,7 +72,6 @@ html {
   justify-content: center;
   padding-top: 80px; /* space for navbar */
   overflow: hidden;
-  /*color: #fff;*/
   text-align: center;
 }
 
@@ -69,7 +92,6 @@ html {
   padding: 0 16px;
 }
 
-/* Hero Heading & Button */
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -81,7 +103,9 @@ html {
   font-weight: 500;
 }
 
-/* Section Titles and Subtitles */
+/* =======================
+   SECTION TITLES
+   ======================= */
 .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -111,7 +135,9 @@ html {
   color: #f7c600;
 }
 
-/* Enhanced Services Section */
+/* =======================
+   SERVICES
+   ======================= */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -132,7 +158,7 @@ html {
 }
 
 .service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -141,11 +167,6 @@ html {
   background: linear-gradient(90deg, #f7c600, #ffd700, #f7c600);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { background-position: -200% 0; }
-  50% { background-position: 200% 0; }
 }
 
 .service-card-inner {
@@ -191,12 +212,227 @@ html {
   font-size: 0.95rem;
 }
 
-/* Hide portfolio section */
-#portfolio {
-  display: none;
+/* =======================
+   PRICING
+   ======================= */
+.pricing-hero {
+  background: linear-gradient(135deg, #333 0%, #555 50%, #333 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Enhanced Button Styles */
+.pricing-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23f7c600" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23f7c600" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23f7c600" opacity="0.15"/><circle cx="10" cy="60" r="0.5" fill="%23f7c600" opacity="0.15"/><circle cx="90" cy="40" r="0.5" fill="%23f7c600" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.pricing-container {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #333, #f7c600, #333);
+}
+
+.pricing-card.popular {
+  transform: scale(1.05);
+  border-color: #f7c600;
+  box-shadow: 0 20px 40px rgba(247, 198, 0, 0.2);
+}
+
+.pricing-card.popular::before {
+  background: linear-gradient(90deg, #f7c600, #ffd700, #f7c600);
+  height: 6px;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  background: linear-gradient(135deg, #f7c600, #ffd700);
+  color: #333;
+  padding: 8px 20px;
+  border-radius: 0 0 15px 15px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.plan-description {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.plan-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.plan-price .currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+}
+
+.plan-period {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.plan-features li {
+  padding: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.plan-features i {
+  color: #f7c600;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.plan-button {
+  width: 100%;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.plan-button.primary {
+  background: linear-gradient(135deg, #f7c600, #ffd700);
+  color: #333;
+}
+
+.plan-button.secondary {
+  background: linear-gradient(135deg, #333, #555);
+  color: white;
+}
+
+.plan-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-button.primary:hover {
+  background: linear-gradient(135deg, #ffd700, #f7c600);
+  color: #333;
+}
+
+.plan-button.secondary:hover {
+  background: linear-gradient(135deg, #f7c600, #ffd700);
+  color: #333;
+}
+
+.custom-solutions {
+  background: #333;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.custom-solutions h2 {
+  color: #f7c600;
+  margin-bottom: 1rem;
+}
+
+.faq-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.faq-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #f7c600;
+  color: #333;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* =======================
+   BUTTONS
+   ======================= */
 .btn-enhanced {
   background: linear-gradient(135deg, #333 0%, #555 100%);
   color: white;
@@ -216,7 +452,7 @@ html {
 }
 
 .btn-enhanced::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -237,10 +473,52 @@ html {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile tweaks */
+/* =======================
+   MISC
+   ======================= */
+#portfolio {
+  display: none;
+}
+
+/* =======================
+   ANIMATIONS
+   ======================= */
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: -200% 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+}
+
+/* =======================
+   RESPONSIVE
+   ======================= */
+@media (max-width: 768px) {
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .plan-price {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 767.98px) {
-  .section-title { font-size: 1.5rem; }
-  .hero h1 { font-size: 2rem; }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
 
   .services-grid {
     grid-template-columns: 1fr;
